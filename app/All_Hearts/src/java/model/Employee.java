@@ -14,62 +14,98 @@ import org.joda.time.DateTime;
  */
 class Employee {
     
-    private String nric;
+    private DateTime birthday;
+    private String citizenship;
+    private String contactNumber;
+    private String email;
     private String name;
     private String nickname;
-    private String citizenship;
-    private DateTime birthday;
-    private String email;
-    private String contactNumber;
+    private String nric;
     private PassportDetails passportDetails;
-    private boolean registeredWithMOE;
     private PaymentDetails paymentDetail;
+    private boolean registeredWithMOE;
     private LinkedHashMap<String,DateTime> skills;
 
-    public String getName() {
+    Employee(String nric, String name, DateTime birthday){
+        this.nric = nric;
+        this.name = name;
+        this.birthday = birthday;
+        citizenship = "";
+        nickname = "";
+        email = "";
+        contactNumber = "";
+        passportDetails = null;
+        registeredWithMOE = false;
+        paymentDetail = null;
+        skills = null;
+    }
+    
+    String getName() {
         return name;
     }
 
-    public String getNickname() {
+    String getNickname() {
         return nickname;
     }
 
-    public String getNric() {
+    String getNric() {
         return nric;
     }
 
-    public String getCitizenship() {
+    String getCitizenship() {
         return citizenship;
     }
 
-    public PassportDetails getPassportDetails() {
+    PassportDetails getPassportDetails() {
         return passportDetails;
     }
 
-    public String getContactNumber() {
+    String getContactNumber() {
         return contactNumber;
     }
 
-    public DateTime getBirthday() {
+    DateTime getBirthday() {
         return birthday;
     }
 
-    public boolean isRegisteredWithMOE() {
+    boolean isRegisteredWithMOE() {
         return registeredWithMOE;
     }
 
-    public String getEmail() {
+    String getEmail() {
         return email;
     }
 
-    public PaymentDetails getPaymentDetail() {
+    PaymentDetails getPaymentDetail() {
         return paymentDetail;
     }
 
-    public LinkedHashMap<String, DateTime> getSkills() {
+    LinkedHashMap<String, DateTime> getSkills() {
         return skills;
     }
-    
-    
+
+    void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    void setEmail(String email) {
+        this.email = email;
+    }
+
+    void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    void setPassportDetails(PassportDetails passportDetails) {
+        this.passportDetails = passportDetails;
+    }
+
+    void setRegisteredWithMOE(boolean registeredWithMOE) {
+        this.registeredWithMOE = registeredWithMOE;
+    }
+
+    void setPaymentDetail(PaymentDetails paymentDetail) {
+        this.paymentDetail = paymentDetail;
+    }
     
 }

@@ -15,4 +15,8 @@ public class FullTimeEmployee extends Employee{
     private DateTime startDate;
     private DateTime endDate;
     private double currentPay;
+    
+    public FullTimeEmployee(String nric, String name, DateTime birthday){
+        super(nric, name, birthday);
+    }
 }

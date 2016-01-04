@@ -12,11 +12,13 @@ nickname VARCHAR(255),
 citizenship VARCHAR(20) NOT NULL,
 birthday DATE NOT NULL,
 email VARCHAR(255),
-contact_number VARCHAR(255);
-registeredWithMOE BOOLEAN NOT NULL
-fulltime BOOLEAN NOT NULL,
+contact_number VARCHAR(255),
+registered_with_moe BOOLEAN NOT NULL,
+fulltime BOOLEAN NOT NULL
 );
 
+INSERT INTO employee VALUES ('nric','name','nickname','citizenship','01-01-2016','email','contact no',false,false);
+/*
 #create skills table
 CREATE TABLE skills(
 employee VARCHAR(15) NOT NULL,
@@ -184,3 +186,4 @@ CONSTRAINT LOGISTICS_LOAN_PK PRIMARY KEY (Programme,Item),
 CONSTRAINT LOGISTICS_LOAN_FK1 FOREIGN KEY (Programme) REFERENCES PROGRAMME(Name),
 CONSTRAINT LOGISTICS_LOAN_FK3 FOREIGN KEY (Item) REFERENCES ITEM_DETAILS(ID)
 );
+*/
